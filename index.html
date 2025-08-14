@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concorsi Creativi - Nova Lumo</title>
+    
+    <!-- Google Fonts per un look professionale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Stili generali del corpo e dei font */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-image: linear-gradient(rgba(29, 38, 113, 0.6), rgba(195, 55, 100, 0.6)), url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Mantiene lo sfondo fermo allo scroll */
+        }
+
+        /* Il riquadro semi-trasparente al centro */
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Per Safari */
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Sezione Header */
+        .app-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .app-header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Contenitore dei bottoni */
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Bottoni impilati su mobile */
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* I bottoni del concorso */
+        .contest-button {
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            padding: 18px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            background: rgba(195, 55, 100, 0.8);
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contest-button:hover {
+            transform: scale(1.05);
+            background-color: rgba(29, 38, 113, 0.9);
+        }
+
+        /* Sezione Footer */
+        .app-footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* Stile per i link nel footer per mantenerli bianchi e puliti */
+        .app-footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: text-decoration 0.3s ease;
+        }
+
+        .app-footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Animazione semplice per l'effetto fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Design responsivo per Desktop */
+        @media (min-width: 768px) {
+            .content-wrapper {
+                padding: 40px 60px;
+            }
+            .button-container {
+                flex-direction: row; /* Bottoni affiancati su schermi più grandi */
+                justify-content: center;
+            }
+            .contest-button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <header class="app-header">
+            <h1>Contest Creativi</h1>
+            <p>
+                Esprimi te stesso e dai voce alla tua creatività. 
+                <br>
+                Invia la tua candidatura qui sotto.
+            </p>
+        </header>
+
+        <main>
+            <div class="button-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUOOqNnbVpXLXzEiutsYBBqXXFgfKinxtXAl9Jm7hvMWXQzg/viewform" class="contest-button" target="_blank" rel="noopener noreferrer">
+                    Contest di Fotografia
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlZEfIjyl9cxhsEv9geQ76F16-EzJVg1AneHqXK9l68JdTqQ/viewform" class="contest-button" target="_blank" rel="noopener noreferrer">
+                    Contest di Poesia
+                </a>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>
+                Per qualsiasi informazione contattaci a: <br>
+                <a href="mailto:associazione.nova.lumo@gmail.com">associazione.nova.lumo@gmail.com</a> |
+                <a href="https://www.instagram.com/nova.lumo" target="_blank" rel="noopener noreferrer">@nova.lumo</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
